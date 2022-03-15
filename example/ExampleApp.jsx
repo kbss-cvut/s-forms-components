@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import SForms, {Constants} from 's-forms';
+import SForms, {Constants, IntlContextProvider} from 's-forms';
 import SmartComponents from "../src/SmartComponents";
 
 import 's-forms/css/s-forms.min.css';
@@ -64,14 +64,16 @@ class ExampleApp extends React.Component {
   render() {
     return (
       <div className="p-4">
-        <SForms
-          ref={this.refForm}
-          form={this.state.selectedForm}
-          options={options}
-          fetchTypeAheadValues={this.fetchTypeAheadValues}
-          isFormValid={(isFormValid) => this.setState({isFormValid})}
-          componentMapRules={componentMapping}
-        />
+        <IntlContextProvider locale={options.intl.locale}>
+          <SForms
+            ref={this.refForm}
+            form={this.state.selectedForm}
+            options={options}
+            fetchTypeAheadValues={this.fetchTypeAheadValues}
+            isFormValid={(isFormValid) => this.setState({isFormValid})}
+            componentMapRules={componentMapping}
+          />
+        </IntlContextProvider>
         <div>
           Second form demonstrates show advanced switch and sections with answer.
           Use the switch form button bellow to switch between individual forms.
