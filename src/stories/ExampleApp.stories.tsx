@@ -29,6 +29,7 @@ const options = {
   horizontalWizardNav: false,
   wizardStepButtons: true,
   enableForwardSkip: true,
+  debugMode: false,
   startingStep: 1,
   users: [
     { id: "http://fel.cvut.cz/people/max-chopart", label: "Max Chopart" },

@@ -45,20 +45,15 @@ export default class WizardStepComponent extends WizardStep {
   }
 
   _isSticky() {
-    const question = this.props.step;
-    return JsonLdUtils.hasValue(question, SConstants.LAYOUT_CLASS, Constants.LAYOUT_STICKY);
+    const question = this.props.question;
+    return JsonLdUtils.hasValue(
+      question,
+      SConstants.LAYOUT_CLASS,
+      Constants.LAYOUT_STICKY
+    );
   }
 
-  _onMouseEnterHandler = () => {
-    this.setState({ showIcon: true });
-  };
-
-  _onMouseLeaveHandler = () => {
-    this.setState({ showIcon: false });
-  };
-
   _handleScroll = () => {
-
     /**
      * @type {HTMLDivElement}
      */
@@ -102,15 +97,12 @@ export default class WizardStepComponent extends WizardStep {
 
   _renderIdentifierText() {
     return (
-      <SectionIdentifier question={this.props.step}
-                         prefix="("
-                         suffix=")"
-      />
+      <SectionIdentifier question={this.props.question} prefix="(" suffix=")" />
     );
   }
 
   _renderShowAdvanced() {
-    const question = this.props.step;
+    const question = this.props.question;
 
     if (!ShowAdvancedSwitch.mappingRule(question)) {
       return null;
@@ -118,56 +110,28 @@ export default class WizardStepComponent extends WizardStep {
 
     return (
       <ShowAdvancedSwitch
-        question={this.props.step}
+        question={this.props.question}
         onChange={this.onChange}
-        index={this.props.stepIndex}
+        index={this.props.index}
       />
     );
   }
 
   render() {
-
-    const categoryClass = Question._getQuestionCategoryClass(this.props.step);
-
-    let headerClass = 'bg-primary text-white wizard-step-header';
-    let headerStyle = null;
-
-    if (this.state.headerFloating) {
-      headerClass += ' floating';
-      headerStyle = {
-        width: this.state.headerWidth
-      }
-    }
-
-
     return (
-      <div className="wizard-step">
-        <Card ref={this.card} className="wizard-step-content" >
-          <Card.Header ref={this.cardHeader}
-                       className={headerClass}
-                       style={headerStyle}
-                       as="h6"
-                       id={this.props.step['@id']}
-                       onMouseEnter={this._onMouseEnterHandler}
-                       onMouseLeave={this._onMouseLeaveHandler}
-          >
-            {JsonLdUtils.getLocalized(this.props.step[JsonLdUtils.RDFS_LABEL], this.props.options.intl)}
-            {QuestionStatic.renderIcons(this.props.step, this.props.options, this.onCommentChange, this.state.showIcon)}
-
-            {this._renderIdentifierText()}
-            {this._renderShowAdvanced()}
-
-          </Card.Header>
-          <Card.Body className={categoryClass} style={{marginTop: this.state.headerHeight}}>
-            <Question question={this.props.step} onChange={this.onChange} withoutCard={true}
-                      index={this.props.stepIndex}/>
-          </Card.Body>
-        </Card>
-
-        {this.props.options.wizardStepButtons && this._renderWizardStepButtons()}
-      </div>
+      <React.Fragment>
+        <Question
+          question={this.props.question}
+          onChange={this.onChange}
+          collapsible={FormUtils.isAnswerable(this.props.question)}
+        >
+          {this._renderIdentifierText()}
+          {this._renderShowAdvanced()}
+        </Question>
+        {this.props.options.wizardStepButtons &&
+          this._renderWizardStepButtons()}
+      </React.Fragment>
     );
-
   }
 }
 

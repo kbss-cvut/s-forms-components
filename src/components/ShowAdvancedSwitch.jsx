@@ -66,7 +66,7 @@ export default class ShowAdvancedSwitch extends Question {
     question[SConstants.HAS_ANSWER][0][SConstants.HAS_DATA_VALUE] = {'@value': !value}
     question[SConstants.HAS_VALID_ANSWER] = true;
 
-    this._onChange(SConstants.HAS_SUBQUESTION, index, question);
+    this._handleChange(SConstants.HAS_SUBQUESTION, index, question);
   };
 
   _renderIcons() {
