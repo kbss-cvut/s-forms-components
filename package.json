@@ -40,7 +40,7 @@
     "@babel/plugin-transform-runtime": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
     "@babel/preset-react": "^7.9.4",
-    "@kbss-cvut/s-forms": "^0.4.2-alpha-c10dc82.0",
+    "@kbss-cvut/s-forms": "^0.4.2-alpha-82065e2.0",
     "@storybook/addon-actions": "^6.4.19",
     "@storybook/addon-essentials": "^6.4.19",
     "@storybook/addon-interactions": "^6.4.19",
