@@ -331,22 +331,24 @@ export default class TypeQuestionAnswer extends React.Component {
     }
 
     return (
-      <IntelligentTreeSelect
-        value={selectedValue}
-        className="react-select-container"
-        classNamePrefix="react-select"
-        valueKey="value"
-        labelKey="label"
-        childrenKey="children"
-        options={this.state.optionsList}
-        expanded={true}
-        closeMenuOnSelect={this.state.singleSelect}
-        onChange={this._handleChange}
-        multi={!this.state.singleSelect}
-        showSettings={false}
-        renderAsTree={true}
-        optionLeftOffset={5}
-      />
+      <div onClick={(e) => e.stopPropagation()}>
+        <IntelligentTreeSelect
+          value={selectedValue}
+          className="react-select-container"
+          classNamePrefix="react-select"
+          valueKey="value"
+          labelKey="label"
+          childrenKey="children"
+          options={this.state.optionsList}
+          expanded={true}
+          closeMenuOnSelect={this.state.singleSelect}
+          onChange={this._handleChange}
+          multi={!this.state.singleSelect}
+          showSettings={false}
+          renderAsTree={true}
+          optionLeftOffset={5}
+        />
+      </div>
     );
   }
 
