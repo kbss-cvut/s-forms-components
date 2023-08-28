@@ -1,0 +1,262 @@
+{ "@context": {
+  "doc": "http://onto.fel.cvut.cz/ontologies/documentation/",
+  "x": "https://x.com/x/",
+  "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+  "form": "http://onto.fel.cvut.cz/ontologies/form/",
+  "owl": "http://www.w3.org/2002/07/owl#",
+  "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+  "xml": "http://www.w3.org/XML/1998/namespace",
+  "xsd": "http://www.w3.org/2001/XMLSchema#",
+  "skos": "http://www.w3.org/2004/02/skos/core#",
+  "label": {
+    "@id": "http://www.w3.org/2000/01/rdf-schema#label"
+  },
+  "has_data_value": {
+    "@id": "http://onto.fel.cvut.cz/ontologies/documentation/has_data_value"
+  },
+  "has_answer": {
+    "@id": "http://onto.fel.cvut.cz/ontologies/documentation/has_answer"
+  },
+  "has-answer-origin": {
+    "@id": "http://onto.fel.cvut.cz/ontologies/form/has-answer-origin"
+  },
+  "has-possible-values-query": {
+    "@id": "http://onto.fel.cvut.cz/ontologies/form/has-possible-values-query"
+  },
+  "has-possible-value": {
+    "@id": "http://onto.fel.cvut.cz/ontologies/form/has-possible-value"
+  },
+  "has-layout-class": {
+    "@id": "http://onto.fel.cvut.cz/ontologies/form-layout/has-layout-class"
+  },
+  "has_related_question": {
+    "@id": "http://onto.fel.cvut.cz/ontologies/documentation/has_related_question",
+    "@type": "@id"
+  },
+  "has-question-origin": {
+    "@id": "http://onto.fel.cvut.cz/ontologies/form/has-question-origin",
+    "@type": "@id"
+  },
+  "is-relevant-if": {
+    "@id": "http://onto.fel.cvut.cz/ontologies/form/is-relevant-if",
+    "@type": "@id"
+  },
+  "has-tested-question": {
+    "@id": "http://onto.fel.cvut.cz/ontologies/form/has-tested-question",
+    "@type": "@id"
+  },
+  "has-sub-condition": {
+    "@id": "http://onto.fel.cvut.cz/ontologies/form/has-sub-condition",
+    "@type": "@id"
+  },
+  "accepts-answer-value" : {
+    "@id" : "http://onto.fel.cvut.cz/ontologies/form/accepts-answer-value"
+  },
+  "has-importance" : {
+    "@id" : "http://onto.fel.cvut.cz/ontologies/form-template/has-importance",
+    "@type" : "@id"
+  },
+  "has-comment" : {
+    "@id" : "http://onto.fel.cvut.cz/ontologies/form/has-comment"
+  },
+  "has-timestamp" : {
+    "@id" : "http://onto.fel.cvut.cz/ontologies/form/has-timestamp"
+  },
+  "has-author" : {
+    "@id" : "http://onto.fel.cvut.cz/ontologies/form/has-author",
+    "@type" : "@id"
+  },
+  "has-comment-value" : {
+    "@id" : "http://onto.fel.cvut.cz/ontologies/form/has-comment-value"
+  },
+  "accepts-non-empty-answer-value": {
+    "@id": "http://onto.fel.cvut.cz/ontologies/form/accepts-non-empty-answer-value",
+    "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+  },
+  "minInclusive": {
+    "@id": "http://www.w3.org/2001/XMLSchema#minInclusive"
+  },
+  "maxInclusive": {
+    "@id": "http://www.w3.org/2001/XMLSchema#maxInclusive"
+  },
+  "has-datatype": {
+    "@id": "http://onto.fel.cvut.cz/ontologies/form/has-datatype",
+    "@type": "@id"
+  },
+  "has-preceding-question": {
+    "@id": "http://onto.fel.cvut.cz/ontologies/form/has-preceding-question",
+    "@type": "@id"
+  },
+  "comment": {
+    "@id": "http://www.w3.org/2000/01/rdf-schema#comment"
+  },
+  "has-unit": {
+    "@id": "http://onto.fel.cvut.cz/ontologies/form/has-unit"
+  },
+  "has-input-mask": {
+    "@id": "http://onto.fel.cvut.cz/ontologies/form/has-input-mask"
+  },
+  "description": {
+    "@id": "http://purl.org/dc/elements/1.1/description"
+  },
+  "is-relevant-if_removed": {
+    "@id": "http://onto.fel.cvut.cz/ontologies/form/is-relevant-if_removed",
+    "@type": "@id"
+  },
+  "requires-answer": {
+    "@id": "http://onto.fel.cvut.cz/ontologies/form/requires-answer",
+    "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+  },
+  "accepts-validation-value": {
+    "@id": "http://onto.fel.cvut.cz/ontologies/form/accepts-validation-value"
+  },
+  "imports": {
+    "@id": "http://www.w3.org/2002/07/owl#imports",
+    "@type": "@id"
+  },
+  "requires-answer-if": {
+    "@id": "http://onto.fel.cvut.cz/ontologies/form/requires-answer-if",
+    "@type": "@id"
+  },
+  "has-media-content": {
+    "@id": "http://onto.fel.cvut.cz/ontologies/form/has-media-content"
+  },
+  "has-composite-pattern": {
+    "@id": "http://onto.fel.cvut.cz/ontologies/form/has-composite-pattern"
+  },
+  "has-pattern": {
+    "@id": "http://onto.fel.cvut.cz/ontologies/form/has-pattern"
+  },
+  "has-composite-variables": {
+    "@id": "http://onto.fel.cvut.cz/ontologies/form/has-composite-variables"
+  },
+  "show-advanced-question" : {
+    "@id" : "http://onto.fel.cvut.cz/ontologies/form/show-advanced-question"
+  },
+  "has-unit-of-measure-question": {
+    "@id": "http://onto.fel.cvut.cz/ontologies/form/has-unit-of-measure-question"
+  },
+  "has-type-question": {
+    "@id": "http://onto.fel.cvut.cz/ontologies/form/has-type-question"
+  },
+  "has-non-selectable-value": {
+    "@id": "http://onto.fel.cvut.cz/ontologies/form/has-non-selectable-value"
+  },
+  "has-identifying-question": {
+    "@id": "http://onto.fel.cvut.cz/ontologies/form/has-identifying-question"
+  },
+  "initial-input-length": {
+    "@id": "http://onto.fel.cvut.cz/ontologies/form-layout/initial-input-length"
+  },
+  "source" : {
+    "@id" : "http://purl.org/dc/elements/1.1/source",
+    "@type" : "@id"
+  }
+},
+  "@graph": [
+    {
+      "@id": "pravnicka-osoba",
+      "label": "Právnická osoba"
+    },
+    {
+      "@id": "fyzicka-osoba",
+      "label": "Fyzická osoba",
+      "owl:disjointWith": [
+        {
+          "@id": "pravnicka-osoba"
+        }
+      ]
+    },
+    {
+      "@id": "fyzicka-osoba--nezletila",
+      "label": "Fyzická osoba nezletilá",
+      "skos:broader": {
+        "@id": "fyzicka-osoba"
+      },
+      "owl:disjointWith": [
+        {
+          "@id": "pravnicka-osoba"
+        }
+      ]
+    },
+    {
+      "@id": "fyzicka-osoba--chytra",
+      "label": "Fyzická osoba chytrá",
+      "skos:broader": {
+        "@id": "fyzicka-osoba"
+      },
+      "owl:disjointWith": [
+        {
+          "@id": "pravnicka-osoba"
+        }
+      ]
+    },
+    {
+      "@id": "podtrida-fyzicka-osoby-s-velice-dlouhym-nazvem",
+      "label": "Podtřída fyzické osoby s velice dlouhým názvem",
+      "skos:broader": {
+        "@id": "fyzicka-osoba"
+      },
+      "owl:disjointWith": [
+        {
+          "@id": "pravnicka-osoba"
+        }
+      ]
+    },
+    {
+      "@id": "jeste-specifickejsi-podtrida-fyzicka-osoby-s-velice-dlouhym-nazvem",
+      "label": "Ještě specifickejší podtřída fyzické osoby s velice dlouhým názvem",
+      "skos:broader": {
+        "@id": "podtrida-fyzicka-osoby-s-velice-dlouhym-nazvem"
+      },
+      "owl:disjointWith": [
+        {
+          "@id": "pravnicka-osoba"
+        }
+      ]
+    },
+    {
+      "@id": "fyzicka-osoba--hloupa",
+      "label": "Fyzická osoba hloupá",
+      "skos:broader": {
+        "@id": "fyzicka-osoba"
+      },
+      "owl:disjointWith": [
+        {
+          "@id": "pravnicka-osoba"
+        },
+        {
+          "@id": "fyzicka-osoba--chytra"
+        }
+      ]
+    },
+    {
+      "@id": "x:form-root",
+      "@type": "doc:question",
+      "has_related_question": [
+        "provozovatel-section-666"
+      ],
+      "has-layout-class": "form"
+    },
+    {
+      "@id": "provozovatel-section-666",
+      "@type": "doc:question",
+      "has-layout-class": [
+        "type-ahead"
+      ],
+      "has-possible-value": [
+        "fyzicka-osoba",
+        "pravnicka-osoba",
+        "fyzicka-osoba--nezletila",
+        "fyzicka-osoba--chytra",
+        "fyzicka-osoba--hloupa",
+        "podtrida-fyzicka-osoby-s-velice-dlouhym-nazvem",
+        "jeste-specifickejsi-podtrida-fyzicka-osoby-s-velice-dlouhym-nazvem"
+      ],
+      "has-non-selectable-value": [
+        "fyzicka-osoba"
+      ],
+      "label": "Má provozovatele"
+    }
+  ]
+}

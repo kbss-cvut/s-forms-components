@@ -7,6 +7,7 @@ import NullQuestion from "./components/NullQuestion";
 import Utils from "./Utils";
 import SectionComponent from "./components/SectionComponent";
 import "./styles/components.css";
+import SimpleTreeTypeaheadQuestion from "./components/SimpleTreeTypeaheadQuestion";
 
 export default class SmartComponents {
   static componentCache = {};
@@ -40,6 +41,10 @@ export default class SmartComponents {
       {
         component: CompositeQuestion,
         mapRule: CompositeQuestion.mappingRule,
+      },
+      {
+        component: SimpleTreeTypeaheadQuestion,
+        mapRule: SimpleTreeTypeaheadQuestion.mappingRule,
       },
       {
         component: NullQuestion,

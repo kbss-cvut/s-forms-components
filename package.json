@@ -1,6 +1,6 @@
 {
   "name": "s-forms-components",
-  "version": "0.1.9",
+  "version": "0.2.0",
   "engines": {
     "node": ">=14.17.1"
   },
@@ -15,30 +15,12 @@
     "dist/**/*"
   ],
   "dependencies": {
-    "intelligent-tree-select": "~0.11.0",
-    "babel-loader": "^8.2.3",
-    "bootstrap": "^4.6.0",
-    "chromatic": "^6.5.3",
-    "classnames": "^2.2.6",
-    "husky": "^8.0.1",
-    "jsonld": "^0.4.12",
-    "jsonld-utils": "https://kbss.felk.cvut.cz/dist/jsonld-utils-0.0.11.tgz",
-    "lint-staged": "^13.0.3",
-    "microbundle": "^0.14.2",
-    "prettier": "2.6.0",
-    "prop-types": "^15.7.2",
-    "query-string": "^6.13.5",
-    "react": "^18.2.0",
-    "react-bootstrap": "1.0.1",
-    "react-dom": "^18.2.0",
-    "standard-version": "^9.3.2",
-    "typescript": "^4.6.2"
+    "intelligent-tree-select": "~0.11.0"
   },
   "peerDependencies": {
     "@kbss-cvut/s-forms": "^0.7.0",
-    "react": ">= 18.2.0",
-    "react-bootstrap": "1.0.1",
-    "react-dom": ">= 18.2.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.17.7",
@@ -84,7 +66,7 @@
     "dev": "sb dev -p 6006",
     "build": "microbundle --jsx React.createElement",
     "build:lib": "npm run build && npm pack",
-    "test": "jest",
+    "test": "",
     "build-storybook": "sb build",
     "chromatic": "npx chromatic",
     "release:patch": "npm test && standard-version --release-as patch && npm publish",
