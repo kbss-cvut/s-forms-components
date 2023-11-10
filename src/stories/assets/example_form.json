@@ -156,6 +156,16 @@
   },
   "@graph": [
     {
+      "@id": "mena-cz",
+      "label": "Kč",
+      "comment": "Česká koruna"
+    },
+    {
+      "@id": "mena-sr",
+      "label": "Sk",
+      "comment": "Slovenská koruna"
+    },
+    {
       "@id": "pravnicka-osoba",
       "label": "Právnická osoba"
     },
@@ -395,7 +405,11 @@
       "@id": "mena-8088",
       "@type": "doc:question",
       "has_related_question": [],
-      "has-layout-class": "text",
+      "has-layout-class": "type-ahead",
+      "has-possible-value": [
+        "mena-cz",
+        "mena-sr"
+      ],
       "label": "Měna"
     },
     {
