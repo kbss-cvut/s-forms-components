@@ -646,7 +646,7 @@
       "@id": "show-advanced-question:-test-advanced-switch-na",
       "@type": "doc:question",
       "has-layout-class": "checkbox",
-      "has-question-origin": "form:show-advanced-question",
+      "has-question-origin": "form-show-advanced-question",
       "form:show-advanced-question": true,
       "description": "Advanced switch test",
       "label": "Advanced switch test",
@@ -666,7 +666,7 @@
       ]
     },
     {
-      "@id" : "form:condition-test-advanced-switch-na",
+      "@id" : "form-condition-test-advanced-switch-na",
       "@type" : "form:condition",
       "accepts-answer-value" : true,
       "has-tested-question" : "show-advanced-question:-test-advanced-switch-na",
@@ -678,7 +678,7 @@
       "has_related_question": [],
       "has-layout-class": ["text", "emphasise-on-relevant"],
       "label": "Identifier",
-      "is-relevant-if" : "form:condition-test-advanced-switch-na",
+      "is-relevant-if" : "form-condition-test-advanced-switch-na",
       "has-importance" : "ft:advanced"
     },
     {
@@ -705,7 +705,7 @@
       "@id": "show-advanced-question:-test-advanced-switch",
       "@type": "doc:question",
       "has-layout-class": "checkbox",
-      "has-question-origin": "form:show-advanced-question",
+      "has-question-origin": "form-show-advanced-question",
       "form:show-advanced-question": true,
       "description": "Advanced switch test",
       "label": "Advanced switch test",
@@ -725,7 +725,7 @@
       ]
     },
     {
-      "@id" : "form:condition-test-advanced-switch",
+      "@id" : "form-condition-test-advanced-switch",
       "@type" : "form:condition",
       "accepts-answer-value" : true,
       "has-tested-question" : "show-advanced-question:-test-advanced-switch",
@@ -737,7 +737,7 @@
       "has_related_question": [],
       "has-layout-class": ["text", "emphasise-on-relevant"],
       "label": "Identifier",
-      "is-relevant-if" : "form:condition-test-advanced-switch",
+      "is-relevant-if" : "form-condition-test-advanced-switch",
       "has-importance" : "ft:advanced"
     },
     {
