@@ -266,6 +266,7 @@
       "@type": "doc:question",
       "has_related_question": [
         "provozovatel-section-666",
+        "ma-vlastnika-section-777",
         "age-1063",
         "cena-6557",
         "mena-8088",
@@ -309,6 +310,26 @@
         "fyzicka-osoba"
       ],
       "label": "Má provozovatele"
+    },
+    {
+      "@id": "ma-vlastnika-section-777",
+      "@type": "doc:question",
+      "has-layout-class": [
+        "type-ahead"
+      ],
+      "has-possible-value": [
+        "fyzicka-osoba",
+        "pravnicka-osoba",
+        "fyzicka-osoba--nezletila",
+        "fyzicka-osoba--chytra",
+        "fyzicka-osoba--hloupa",
+        "podtrida-fyzicka-osoby-s-velice-dlouhym-nazvem",
+        "jeste-specifickejsi-podtrida-fyzicka-osoby-s-velice-dlouhym-nazvem"
+      ],
+      "has-non-selectable-value": [
+        "fyzicka-osoba"
+      ],
+      "label": "Má vlastníka"
     },
     {
       "@id": "ps-type-1",
