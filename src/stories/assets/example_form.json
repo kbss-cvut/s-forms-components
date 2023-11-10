@@ -1,7 +1,7 @@
 {
   "@context": {
+    "ex": "https://example.org/sfc-example/",
     "doc": "http://onto.fel.cvut.cz/ontologies/documentation/",
-    "x": "https://x.com/x/",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "form": "http://onto.fel.cvut.cz/ontologies/form/",
     "owl": "http://www.w3.org/2002/07/owl#",
@@ -272,7 +272,7 @@
       "label": "Jméno"
     },
     {
-      "@id": "x:form-root",
+      "@id": "form-root",
       "@type": "doc:question",
       "has_related_question": [
         "provozovatel-section-666",
