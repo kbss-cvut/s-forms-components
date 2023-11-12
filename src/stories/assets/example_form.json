@@ -246,6 +246,7 @@
     {
       "@id": "age-1063",
       "@type": "doc:question",
+      "has-question-origin": "age-1063-qo",
       "has_related_question": [],
       "has-layout-class": "text",
       "has-datatype": "xsd:int",
@@ -256,6 +257,7 @@
     {
       "@id": "cena-6557",
       "@type": "doc:question",
+      "has-question-origin": "cena-6557-qo",
       "has-unit-of-measure-question": "mena-8088",
       "has-layout-class": "text",
       "has-datatype": "xsd:int",
@@ -266,6 +268,7 @@
     {
       "@id": "first-name-9402",
       "@type": "doc:question",
+      "has-question-origin": "first-name-9402-qo",
       "has_related_question": [],
       "has-layout-class": "text",
       "has-datatype": "foaf:givenName",
@@ -276,6 +279,7 @@
     {
       "@id": "form-root",
       "@type": "doc:question",
+      "has-question-origin": "form-root-qo",
       "has_related_question": [
         "provozovatel-section-666",
         "ma-vlastnika-section-777",
@@ -292,6 +296,7 @@
     {
       "@id": "provozovatel-section-666",
       "@type": "doc:question",
+      "has-question-origin": "provozovatel-section-666-qo",
       "has_related_question": [
         "ps-type-1",
         "ps-type-2",
@@ -326,6 +331,7 @@
     {
       "@id": "ma-vlastnika-section-777",
       "@type": "doc:question",
+      "has-question-origin": "ma-vlastnika-section-777-qo",
       "has-layout-class": [
         "type-ahead"
       ],
@@ -346,16 +352,19 @@
     {
       "@id": "ps-type-1",
       "@type": "doc:question",
+      "has-question-origin": "ps-type-1-qo",
       "label": "PS type 1"
     },
     {
       "@id": "ps-type-2",
       "@type": "doc:question",
+      "has-question-origin": "ps-type-2-qo",
       "label": "PS type 2"
     },
     {
       "@id": "as-show-advanced-888",
       "@type": "doc:question",
+      "has-question-origin": "as-show-advanced-888-qo",
       "has_related_question": [],
       "has-layout-class": "checkbox",
       "label": "show advanced",
@@ -364,6 +373,7 @@
     {
       "@id": "ps-iq-452",
       "@type": "doc:question",
+      "has-question-origin": "ps-iq-452-qo",
       "has_related_question": [],
       "has-layout-class": "text",
       "label": "IQ",
@@ -372,6 +382,7 @@
     {
       "@id": "ps-age-452",
       "@type": "doc:question",
+      "has-question-origin": "ps-age-452-qo",
       "has_related_question": [],
       "has-layout-class": "text",
       "label": "Age",
@@ -380,6 +391,7 @@
     {
       "@id": "ps-cin-452",
       "@type": "doc:question",
+      "has-question-origin": "ps-cin-452-qo",
       "has_related_question": [],
       "has-layout-class": "text",
       "label": "CIN",
@@ -389,6 +401,7 @@
     {
       "@id": "ps-name-452",
       "@type": "doc:question",
+      "has-question-origin": "ps-name-452-qo",
       "has_related_question": [],
       "has-layout-class": "text",
       "label": "Jméno",
@@ -397,6 +410,7 @@
     {
       "@id": "last-name-6610",
       "@type": "doc:question",
+      "has-question-origin": "last-name-6610-qo",
       "has_related_question": [],
       "has-layout-class": "text",
       "has-datatype": "foaf:familyName",
@@ -406,6 +420,7 @@
     {
       "@id": "mena-8088",
       "@type": "doc:question",
+      "has-question-origin": "mena-8088-qo",
       "has_related_question": [],
       "has-layout-class": "type-ahead",
       "has-possible-value": [
@@ -417,6 +432,7 @@
     {
       "@id": "parent-section-1590",
       "@type": "doc:question",
+      "has-question-origin": "parent-section-1590-qo",
       "has_related_question": [
         "test-field-3887",
         "sectionfoo-1592"
@@ -431,6 +447,7 @@
     {
       "@id": "sectionfoo-1592",
       "@type": "doc:question",
+      "has-question-origin": "sectionfoo-1592-qo",
       "has_related_question": [
         "title-7183",
         "first-name-9402",
@@ -452,6 +469,7 @@
     {
       "@id": "test-5278",
       "@type": "doc:question",
+      "has-question-origin": "test-5278-qo",
       "has_related_question": [],
       "has-layout-class": "text",
       "label": "Identifikátor"
@@ -459,6 +477,7 @@
     {
       "@id": "test-field-3887",
       "@type": "doc:question",
+      "has-question-origin": "test-field-3887-qo",
       "has_related_question": [],
       "has-layout-class": "text",
       "label": "Popis vlastníka"
@@ -466,6 +485,7 @@
     {
       "@id": "test-section-666",
       "@type": "doc:question",
+      "has-question-origin": "test-section-666-qo",
       "has_related_question": [
         "test-5278"
       ],
@@ -484,6 +504,7 @@
     {
       "@id": "title-7183",
       "@type": "doc:question",
+      "has-question-origin": "title-7183-qo",
       "has_related_question": [],
       "has-layout-class": "text",
       "label": "Titul"
@@ -635,9 +656,10 @@
     {
       "@id": "non-answerable-section-with-advanced-switch",
       "@type": "doc:question",
+      "has-question-origin": "non-answerable-section-with-advanced-switch-qo",
       "has-layout-class" : [ "checkbox", "section", "collapsed" ],
       "has-preceding-question": "test-section-666",
-      "has_related_question": ["show-advanced-question:-test-advanced-switch-na","test-field-3888-na", "test-5279-na"],
+      "has_related_question": ["show-advanced-question-test-advanced-switch-na","test-field-3888-na", "test-5279-na"],
       "has-identifying-question": [
         "test-5279-na"
       ],
@@ -645,7 +667,7 @@
       "source" : "https://slovník.gov.cz/generický/množství/pojem/má-jednotku"
     },
     {
-      "@id": "show-advanced-question:-test-advanced-switch-na",
+      "@id": "show-advanced-question-test-advanced-switch-na",
       "@type": "doc:question",
       "has-layout-class": "checkbox",
       "has-question-origin": "form-show-advanced-question",
@@ -671,12 +693,13 @@
       "@id" : "form-condition-test-advanced-switch-na",
       "@type" : "form:condition",
       "accepts-answer-value" : true,
-      "has-tested-question" : "show-advanced-question:-test-advanced-switch-na",
+      "has-tested-question" : "show-advanced-question-test-advanced-switch-na",
       "has-importance" : "ft:advanced"
     },
     {
       "@id": "test-5279-na",
       "@type": "doc:question",
+      "has-question-origin": "test-5279-na-qo",
       "has_related_question": [],
       "has-layout-class": ["text", "emphasise-on-relevant"],
       "label": "Identifier",
@@ -686,6 +709,7 @@
     {
       "@id": "test-field-3888-na",
       "@type": "doc:question",
+      "has-question-origin": "test-field-3888-na-qo",
       "has_related_question": [],
       "has-layout-class": "text",
       "label": "Field test",
@@ -694,9 +718,10 @@
     {
       "@id": "answerable-section-with-advanced-switch",
       "@type": "doc:question",
+      "has-question-origin": "answerable-section-with-advanced-switch-qo",
       "has-layout-class" : [ "checkbox", "section", "answerable", "collapsed" ],
       "has-preceding-question": "non-answerable-section-with-advanced-switch",
-      "has_related_question": ["show-advanced-question:-test-advanced-switch","test-field-3888", "test-5279"],
+      "has_related_question": ["show-advanced-question-test-advanced-switch","test-field-3888", "test-5279"],
       "has-identifying-question": [
         "test-5279"
       ],
@@ -704,7 +729,7 @@
       "source" : "https://slovník.gov.cz/generický/množství/pojem/má-jednotku"
     },
     {
-      "@id": "show-advanced-question:-test-advanced-switch",
+      "@id": "show-advanced-question-test-advanced-switch",
       "@type": "doc:question",
       "has-layout-class": "checkbox",
       "has-question-origin": "form-show-advanced-question",
@@ -730,12 +755,13 @@
       "@id" : "form-condition-test-advanced-switch",
       "@type" : "form:condition",
       "accepts-answer-value" : true,
-      "has-tested-question" : "show-advanced-question:-test-advanced-switch",
+      "has-tested-question" : "show-advanced-question-test-advanced-switch",
       "has-importance" : "ft:advanced"
     },
     {
       "@id": "test-5279",
       "@type": "doc:question",
+      "has-question-origin": "test-5279-qo",
       "has_related_question": [],
       "has-layout-class": ["text", "emphasise-on-relevant"],
       "label": "Identifier",
@@ -745,6 +771,7 @@
     {
       "@id": "test-field-3888",
       "@type": "doc:question",
+      "has-question-origin": "test-field-3888-qo",
       "has_related_question": [],
       "has-layout-class": "text",
       "label": "Field test",
