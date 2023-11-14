@@ -1,5 +1,6 @@
 {
   "@context": {
+    "@base": "https://example.org/sfc-example/",
     "ex": "https://example.org/sfc-example/",
     "doc": "http://onto.fel.cvut.cz/ontologies/documentation/",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
