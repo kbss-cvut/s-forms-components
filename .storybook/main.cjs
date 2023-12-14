@@ -5,7 +5,10 @@ module.exports = {
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
   ],
-  framework: "@storybook/react",
+  framework: "@storybook/react-webpack5",
+  core: {
+    builder: "@storybook/builder-webpack5",
+  },
   webpackFinal: async (config) => {
     config.module.rules.push({
       test: /\.mjs$/,
