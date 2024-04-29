@@ -18,7 +18,7 @@
     "intelligent-tree-select": "~0.11.0"
   },
   "peerDependencies": {
-    "@kbss-cvut/s-forms": "^0.7.0",
+    "@kbss-cvut/s-forms": "0.7.1-beta-82d34b0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

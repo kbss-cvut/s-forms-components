@@ -1,7 +1,7 @@
 name: Publish NPM Beta Package
 
 on:
-  pull_request:
+  pull_request_target:
     types:
       - closed
     branches:
@@ -15,10 +15,12 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
 
       - name: Get short SHA
-        id: sha
-        run: echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
+        id: set_sha
+        run: echo "SHA_SHORT=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
 
       - uses: "phips28/gh-action-bump-version@master"
         with:
@@ -27,14 +29,14 @@ jobs:
           major-wording: "MAJOR RELEASE"
           patch-wording: "PATCH RELEASE"
           rc-wording: null
-          preid: ${{ format('beta-{0}', steps.sha.outputs.sha_short) }}
+          preid: ${{ format('beta-{0}', env.SHA_SHORT) }}
           skip-tag: "true"
           skip-commit: "true"
 
       - uses: actions/setup-node@v2
         with:
           node-version: 16
-          registry-url: https://registry.npmjs.org
+          registry-url: https://registry.npmjs.org/package
       - run: npm ci
       - run: npm test
       - run: npm run build

@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import SForms, { Constants, IntlContextProvider } from "@kbss-cvut/s-forms";
+import SForms, { Constants } from "@kbss-cvut/s-forms";
 import SmartComponents from "../SmartComponents";
 import exampleForm from "./assets/example_form.json";
 import exampleFormTC from "./assets/example_turisticky_cil.json";
@@ -69,16 +69,14 @@ const Template: ComponentStory<typeof SForms> = (args) => {
   };
 
   return (
-    <IntlContextProvider locale={options.intl.locale}>
-      <SForms
-        options={options}
-        ref={refForm}
-        form={exampleForm}
-        fetchTypeAheadValues={fetchTypeAheadValues}
-        componentMapRules={componentMapping}
-        {...args}
-      />
-    </IntlContextProvider>
+    <SForms
+      options={options}
+      ref={refForm}
+      form={exampleForm}
+      fetchTypeAheadValues={fetchTypeAheadValues}
+      componentMapRules={componentMapping}
+      {...args}
+    />
   );
 };
 
